@@ -1,0 +1,332 @@
+{
+	"1":
+	{
+		"Name" : "Mediterranean Avenue",
+		"Cost" : "60",
+		"perHouse" : "50",
+		"baseRent" : "2",
+		"oneHouseRent" : "10",
+		"twoHouseRent" : "30",
+		"threeHouseRent" : "90",
+		"fourHouseRent" : "160",
+		"hotelRent" : "250",
+		"monoParts" : "2",
+		"color" : "Brown",
+		"boardPosition" : "1"
+		},
+	"2":
+	{
+		"Name" : "Baltic Avenue",
+		"Cost" : "60",
+		"perHouse" : "50",
+		"baseRent" : "4",
+		"oneHouseRent" : "20",
+		"twoHouseRent" : "60",
+		"threeHouseRent" : "180",
+		"fourHouseRent" : "320",
+		"hotelRent" : "450",
+		"monoParts" : "2",
+		"color" : "Brown",
+		"boardPosition" : "3"
+		},
+	"3":
+	{
+		"Name" : "Oriental Avenue",
+		"Cost" : "100",
+		"perHouse" : "50",
+		"baseRent" : "6",
+		"oneHouseRent" : "30",
+		"twoHouseRent" : "90",
+		"threeHouseRent" : "270",
+		"fourHouseRent" : "400",
+		"hotelRent" : "550",
+		"monoParts" : "3",
+		"color" : "Light Blue",
+		"boardPosition" : "6"
+		},
+	"4":
+	{
+		"Name" : "Vermont Avenue",
+		"Cost" : "100",
+		"perHouse" : "50",
+		"baseRent" : "6",
+		"oneHouseRent" : "30",
+		"twoHouseRent" : "90",
+		"threeHouseRent" : "270",
+		"fourHouseRent" : "400",
+		"hotelRent" : "550",
+		"monoParts" : "3",
+		"color" : "Light Blue",
+		"boardPosition" : "8"
+		},
+	"5":
+	{
+		"Name" : "Connecticut Avenue",
+		"Cost" : "120",
+		"perHouse" : "50",
+		"baseRent" : "8",
+		"oneHouseRent" : "40",
+		"twoHouseRent" : "100",
+		"threeHouseRent" : "300",
+		"fourHouseRent" : "450",
+		"hotelRent" : "600",
+		"monoParts" : "3",
+		"color" : "Light Blue",
+		"boardPosition" : "9"
+		},
+	"6":
+	{
+		"Name" : "St Charles Place",
+		"Cost" : "140",
+		"perHouse" : "100",
+		"baseRent" : "10",
+		"oneHouseRent" : "50",
+		"twoHouseRent" : "150",
+		"threeHouseRent" : "450",
+		"fourHouseRent" : "625",
+		"hotelRent" : "750",
+		"monoParts" : "3",
+		"color" : "Pink",
+		"boardPosition" : "11"
+		},
+	"7":
+	{
+		"Name" : "States Avenue",
+		"Cost" : "140",
+		"perHouse" : "100",
+		"baseRent" : "10",
+		"oneHouseRent" : "50",
+		"twoHouseRent" : "150",
+		"threeHouseRent" : "450",
+		"fourHouseRent" : "625",
+		"hotelRent" : "750",
+		"monoParts" : "3",
+		"color" : "Pink",
+		"boardPosition" : "13"
+		},
+	"8":
+	{
+		"Name" : "Virginia Avenue",
+		"Cost" : "160",
+		"perHouse" : "100",
+		"baseRent" : "12",
+		"oneHouseRent" : "60",
+		"twoHouseRent" : "180",
+		"threeHouseRent" : "500",
+		"fourHouseRent" : "700",
+		"hotelRent" : "900",
+		"monoParts" : "3",
+		"color" : "Pink",
+		"boardPosition" : "14"
+		},
+	"9":
+	{
+		"Name" : "St James Place",
+		"Cost" : "180",
+		"perHouse" : "100",
+		"baseRent" : "14",
+		"oneHouseRent" : "70",
+		"twoHouseRent" : "200",
+		"threeHouseRent" : "550",
+		"fourHouseRent" : "750",
+		"hotelRent" : "950",
+		"monoParts" : "3",
+		"color" : "Orange",
+		"boardPosition" : "16"
+		},
+	"10":
+	{
+		"Name" : "Tennessee Avenue",
+		"Cost" : "180",
+		"perHouse" : "100",
+		"baseRent" : "14",
+		"oneHouseRent" : "70",
+		"twoHouseRent" : "200",
+		"threeHouseRent" : "550",
+		"fourHouseRent" : "750",
+		"hotelRent" : "950",
+		"monoParts" : "3",
+		"color" : "Orange",
+		"boardPosition" : "18"
+		},
+	"11":
+	{
+		"Name" : "New York Avenue",
+		"Cost" : "200",
+		"perHouse" : "100",
+		"baseRent" : "16",
+		"oneHouseRent" : "80",
+		"twoHouseRent" : "220",
+		"threeHouseRent" : "600",
+		"fourHouseRent" : "800",
+		"hotelRent" : "1000",
+		"monoParts" : "3",
+		"color" : "Orange",
+		"boardPosition" : "19"
+		},
+	"12":
+	{
+		"Name" : "Kentucky Avenue",
+		"Cost" : "220",
+		"perHouse" : "150",
+		"baseRent" : "18",
+		"oneHouseRent" : "90",
+		"twoHouseRent" : "250",
+		"threeHouseRent" : "700",
+		"fourHouseRent" : "875",
+		"hotelRent" : "1050",
+		"monoParts" : "3",
+		"color" : "Red",
+		"boardPosition" : "21"
+		},
+	"13":
+	{
+		"Name" : "Indiana Avenue",
+		"Cost" : "220",
+		"perHouse" : "150",
+		"baseRent" : "18",
+		"oneHouseRent" : "90",
+		"twoHouseRent" : "250",
+		"threeHouseRent" : "700",
+		"fourHouseRent" : "875",
+		"hotelRent" : "1050",
+		"monoParts" : "3",
+		"color" : "Red",
+		"boardPosition" : "23"
+		},
+	"14":
+	{
+		"Name" : "Illinois Avenue",
+		"Cost" : "240",
+		"perHouse" : "150",
+		"baseRent" : "20",
+		"oneHouseRent" : "100",
+		"twoHouseRent" : "300",
+		"threeHouseRent" : "750",
+		"fourHouseRent" : "925",
+		"hotelRent" : "1100",
+		"monoParts" : "3",
+		"color" : "Red",
+		"boardPosition" : "24"
+		},
+	"15":
+	{
+		"Name" : "Atlantic Avenue",
+		"Cost" : "260",
+		"perHouse" : "150",
+		"baseRent" : "22",
+		"oneHouseRent" : "110",
+		"twoHouseRent" : "330",
+		"threeHouseRent" : "800",
+		"fourHouseRent" : "975",
+		"hotelRent" : "1150",
+		"monoParts" : "3",
+		"color" : "Yellow",
+		"boardPosition" : "26"
+		},
+	"16":
+	{
+		"Name" : "Ventnor Avenue",
+		"Cost" : "260",
+		"perHouse" : "150",
+		"baseRent" : "22",
+		"oneHouseRent" : "110",
+		"twoHouseRent" : "330",
+		"threeHouseRent" : "800",
+		"fourHouseRent" : "975",
+		"hotelRent" : "1150",
+		"monoParts" : "3",
+		"color" : "Yellow",
+		"boardPosition" : "27"
+		},
+	"17":
+	{
+		"Name" : "Marvin Gardens",
+		"Cost" : "280",
+		"perHouse" : "150",
+		"baseRent" : "24",
+		"oneHouseRent" : "120",
+		"twoHouseRent" : "360",
+		"threeHouseRent" : "850",
+		"fourHouseRent" : "1025",
+		"hotelRent" : "1200",
+		"monoParts" : "3",
+		"color" : "Yellow",
+		"boardPosition" : "29"
+		},
+	"18":
+	{
+		"Name" : "Pacific Avenue",
+		"Cost" : "300",
+		"perHouse" : "200",
+		"baseRent" : "26",
+		"oneHouseRent" : "130",
+		"twoHouseRent" : "390",
+		"threeHouseRent" : "900",
+		"fourHouseRent" : "1100",
+		"hotelRent" : "1275",
+		"monoParts" : "3",
+		"color" : "Green",
+		"boardPosition" : "31"
+		},
+	"19":
+	{
+		"Name" : "North Carolina Avenue",
+		"Cost" : "300",
+		"perHouse" : "200",
+		"baseRent" : "26",
+		"oneHouseRent" : "130",
+		"twoHouseRent" : "390",
+		"threeHouseRent" : "900",
+		"fourHouseRent" : "1100",
+		"hotelRent" : "1275",
+		"monoParts" : "3",
+		"color" : "Green",
+		"boardPosition" : "32"
+		},
+	"20":
+	{
+		"Name" : "Pennsylvania Avenue",
+		"Cost" : "320",
+		"perHouse" : "200",
+		"baseRent" : "28",
+		"oneHouseRent" : "150",
+		"twoHouseRent" : "450",
+		"threeHouseRent" : "1000",
+		"fourHouseRent" : "1200",
+		"hotelRent" : "1400",
+		"monoParts" : "3",
+		"color" : "Green",
+		"boardPosition" : "34"
+		},
+	"21":
+	{
+		"Name" : "Park Place",
+		"Cost" : "350",
+		"perHouse" : "200",
+		"baseRent" : "350",
+		"oneHouseRent" : "175",
+		"twoHouseRent" : "500",
+		"threeHouseRent" : "1100",
+		"fourHouseRent" : "1300",
+		"hotelRent" : "1500",
+		"monoParts" : "3",
+		"color" : "Dark Blue",
+		"boardPosition" : "37"
+		},
+	"22":
+	{
+		"Name" : "Boardwalk",
+		"Cost" : "400",
+		"perHouse" : "200",
+		"baseRent" : "50",
+		"oneHouseRent" : "200",
+		"twoHouseRent" : "600",
+		"threeHouseRent" : "1400",
+		"fourHouseRent" : "1700",
+		"hotelRent" : "2000",
+		"monoParts" : "3",
+		"color" : "Dark Blue",
+		"boardPosition" : "39"
+		}
+}

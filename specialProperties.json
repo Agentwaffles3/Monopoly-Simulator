@@ -1,0 +1,46 @@
+{
+
+	"1":
+	{
+		"Name" : "Reading Railroad",
+		"Cost" : "200",
+		"Type" : "Transport",
+		"boardPosition" : "5"
+		},
+	"2":
+	{
+		"Name" : "Pennsylvania Railroad",
+		"Cost" : "200",
+		"Type" : "Transport",
+		"boardPosition" : "15"
+		},
+	"3":
+	{
+		"Name" : "B&O Railroad",
+		"Cost" : "200",
+		"Type" : "Transport",
+		"boardPosition" : "25"
+		},
+	"4":
+	{
+		"Name" : "Short Line",
+		"Cost" : "200",
+		"Type" : "Transport",
+		"boardPosition" : "35"
+		},
+	"5":
+	{
+		"Name" : "Electric Company",
+		"Cost" : "150",
+		"Type" : "Utility",
+		"boardPosition" : "12"
+		},
+	"6":
+	{
+		"Name" : "Water Works",
+		"Cost" : "150",
+		"Type" : "Utility",
+		"boardPosition" : "28"
+		}
+	
+	}
