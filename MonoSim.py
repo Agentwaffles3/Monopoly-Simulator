@@ -216,8 +216,6 @@ class Simulation:
         self.look_up = json.load(open("boardReference.json"))
             
         random.shuffle(self.players)
-
-        self.run_sim()
         
     def turn(self, player):
         your_turn = True
@@ -267,6 +265,17 @@ class Simulation:
 
             self.logger("Times Landed on Each Space")   # Log number of times each board space was landed on by a player
             self.Reporter.landing_report(self, self.players)
+
+    def step_sim(self, current_state):
+
+        self.turn(self.players(current_state("next player")))
+
+        prev_player = current_state("next player")
+        if prev_player < len(self.players):
+            next_player = prev_player + 1
+        else:
+            next_player = 0
+        return {"previous player": prev_player, "next player": next_player}
 
     def logger(self, report):
         self.log.write(str(report) + "\n")

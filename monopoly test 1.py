@@ -6,6 +6,7 @@ import MonoSim
 if __name__ == "__main__":
 
     sim = MonoSim.Simulation(num_players=4, logging=True)
+    # sim.run_sim()
     sim.players.sort(key=str)
     print("Simulation complete\n")
     
