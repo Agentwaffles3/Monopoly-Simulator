@@ -54,3 +54,59 @@ Creating special property 5
 Created Electric Company
 Creating special property 6
 Created Water Works
+Double Rolled
+Player 1 2
+Player 2 7
+Player 3 12
+Player 4 7
+Times Jailed
+Player 1 0
+Player 2 1
+Player 3 0
+Player 4 0
+Laps Completed
+Player 1 8
+Player 2 8
+Player 3 10
+Player 4 9
+Times Landed on Each Space
+Space: 0 Go 5
+Space: 1 Mediterranean Avenue 6
+Space: 2 Community Chest 3
+Space: 3 Baltic Avenue 5
+Space: 4 Income Tax 3
+Space: 5 Reading Railroad 4
+Space: 6 Oriental Avenue 5
+Space: 7 Chance 6
+Space: 8 Vermont Avenue 3
+Space: 9 Connecticut Avenue 7
+Space: 10 Jail / Visiting 4
+Space: 11 St Charles Place 6
+Space: 12 Electric Company 8
+Space: 13 States Avenue 2
+Space: 14 Virginia Avenue 4
+Space: 15 Pennsylvania Railroad 11
+Space: 16 St James Place 4
+Space: 17 Community Chest 7
+Space: 18 Tennessee Avenue 4
+Space: 19 New York Avenue 9
+Space: 20 Free Parking 3
+Space: 21 Kentucky Avenue 4
+Space: 22 Chance 7
+Space: 23 Indiana Avenue 5
+Space: 24 Illinois Avenue 6
+Space: 25 B&O Railroad 6
+Space: 26 Atlantic Avenue 9
+Space: 27 Ventnor Avenue 6
+Space: 28 Water Works 7
+Space: 29 Marvin Gardens 5
+Space: 30 Go To Jail 1
+Space: 31 Pacific Avenue 8
+Space: 32 North Carolina Avenue 4
+Space: 33 Community Chest 5
+Space: 34 Pennsylvania Avenue 4
+Space: 35 Short Line 6
+Space: 36 Chance 7
+Space: 37 Park Place 3
+Space: 38 Luxury Tax 5
+Space: 39 Boardwalk 8
