@@ -5,7 +5,7 @@ import json
 
 class Player:
 
-    def __init__(self, name):  # TODO update camelCase to better_style
+    def __init__(self, name, ai_type="Basic"):  # TODO update camelCase to better_style
         self.board_position = 0
         self.laps_completed = 0
         self.doubles_rolled = 0
@@ -15,13 +15,16 @@ class Player:
         self.in_jail = False
         self.wallet = 1500
         self.total_wealth = 0
-        
-        self.AI_type = "Basic"
-        
+
+        self.AI_type = ai_type
+
         self.properties = []
         self.landed_on = []
         self.monopolies = {}
-        
+
+        self.ai_data = json_loader(ai_type)
+
+
     # def __str__(self):
     #     return self.player_name
 
@@ -327,7 +330,7 @@ class Simulation:
         # print(list(self.Bank.monopolies.keys()))
         property_setup(self.log, self.Bank, self.log.logging)
             
-        self.look_up = json.load(open("Program Resources\Board Reference.json"))
+        self.look_up = json_loader("Program Resources\Board Reference.json")
             
         random.shuffle(self.players)
         
@@ -428,14 +431,11 @@ class Simulation:
 
 
 def property_setup(log, bank, logging):
-    file = "Program Resources\properties.json"
-    raw = open(file)
-    read = json.load(raw)
-    raw.close()
+    data = json_loader("Program Resources\properties.json")
     for n in range(1, 23):
         if logging is True:
             log.logger("Creating property " + str(n))
-        bank.properties.append(BasicProperty(read.get(str(n))))
+        bank.properties.append(BasicProperty(data.get(str(n))))
         if logging is True:
             log.logger("Created " + bank.properties[n-1].prop_name)
         
@@ -484,8 +484,8 @@ def get_current_property(sim, player):
             return sim.Bank.properties.n
 
 
-def player_sorter(self):
-    return self.player_name
+def player_sorter(player):
+    return player.player_name
 
 
 def upgrade_cost_sorter(upgrade_data):
@@ -494,6 +494,13 @@ def upgrade_cost_sorter(upgrade_data):
 
 def upgrade_gain_sorter(upgrade_data):
     return upgrade_data[4]
+
+
+def json_loader(file):
+    raw = open(file)
+    read = json.load(raw)
+    raw.close()
+    return read
 
 
 """end"""

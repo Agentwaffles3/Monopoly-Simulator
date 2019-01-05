@@ -54,510 +54,364 @@ Creating special property 5
 Created Electric Company
 Creating special property 6
 Created Water Works
-Player 2 is buying Pennsylvania Railroad
-Player 1 is buying Reading Railroad
-Player 2 is buying B&O Railroad
-Property B&O Railroad not owned by bank
-Owned by Player 2
-Player 1 paying rent of 50 to Player 2
-Player 2 is buying St James Place
-Player 1 is buying North Carolina Avenue
-Player 2 is buying Kentucky Avenue
-Player 1 is buying Mediterranean Avenue
-Player 2 is buying Indiana Avenue
-Player 2 is buying Pacific Avenue
-Player 1 is buying Electric Company
-Property Park Place not owned by bank
-Player 1 is buying Tennessee Avenue
-Player 1 is buying Marvin Gardens
-Property Reading Railroad not owned by bank
-Owned by Player 1
-Player 2 paying rent of 25 to Player 1
-Player 2 is buying Virginia Avenue
-Player 1 is buying Pennsylvania Avenue
-Property Ventnor Avenue not owned by bank
-Property Pennsylvania Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 28 to Player 1
-Player 1 is buying Vermont Avenue
-Player 2 is buying St Charles Place
-Player 1 is buying Illinois Avenue
-Player 2 is buying New York Avenue
-Property Pacific Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 26 to Player 2
-Property Illinois Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 20 to Player 1
-Property Short Line not owned by bank
+Player 2 is buying Reading Railroad
+Player 1 is buying St Charles Place
+Player 2 is buying Vermont Avenue
+Player 1 is buying Kentucky Avenue
 Player 2 is buying States Avenue
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-93
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-93
-Property Ventnor Avenue not owned by bank
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-93
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-93
-Property St James Place not owned by bank
-Owned by Player 2
-Player 1 paying rent of 14 to Player 2
-Property Mediterranean Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 2 to Player 1
-Player 2 attempting to upgrade St Charles Place
-Player 2 successfully built house on St Charles Place
-1 houses on St Charles Place
-Property Indiana Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 18 to Player 2
-Player 2 is buying Baltic Avenue
-Player 2 attempting to upgrade States Avenue
-Player 2 successfully built house on States Avenue
-1 houses on States Avenue
-Property Electric Company not owned by bank
-Owned by Player 1
-Player 2 paying rent of 36 to Player 1
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-27
-Player 1 is buying Water Works
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-27
-Property Short Line not owned by bank
-Property Ventnor Avenue not owned by bank
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-27
-Property Park Place not owned by bank
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-27
-Player 2 is buying Connecticut Avenue
-Player 2 attempting to upgrade Virginia Avenue
-Player 2 successfully built house on Virginia Avenue
-1 houses on Virginia Avenue
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-7
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-7
-Property St Charles Place not owned by bank
-Owned by Player 2
-Player 1 paying rent of 50 to Player 2
-Property Ventnor Avenue not owned by bank
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-57
-Property Pennsylvania Railroad not owned by bank
-Owned by Player 2
-Player 1 paying rent of 50 to Player 2
-Player 2 attempting to upgrade St Charles Place
-Player 2 successfully built house on St Charles Place
-2 houses on St Charles Place
 Property Kentucky Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 18 to Player 2
-Property Atlantic Avenue not owned by bank
-Player 2 attempting to upgrade States Avenue
-Player 2 successfully built house on States Avenue
-2 houses on States Avenue
-Property Reading Railroad not owned by bank
 Owned by Player 1
-Player 2 paying rent of 25 to Player 1
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-100
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-100
-Property Illinois Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 20 to Player 1
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-80
-Property St Charles Place not owned by bank
-Owned by Player 2
-Player 1 paying rent of 150 to Player 2
-Property Water Works not owned by bank
-Owned by Player 1
-Player 2 paying rent of 40 to Player 1
-Player 2 attempting to upgrade Virginia Avenue
-Player 2 successfully built house on Virginia Avenue
-2 houses on Virginia Avenue
-Property Pennsylvania Railroad not owned by bank
-Owned by Player 2
-Player 1 paying rent of 50 to Player 2
+Player 2 paying rent of 18 to Player 1
+Player 2 is buying Pacific Avenue
+Player 1 is buying New York Avenue
 Player 1 is buying Ventnor Avenue
-Property Short Line not owned by bank
-Player 1  rolled triple doubles, going to jail
+Player 1 is buying Pennsylvania Avenue
+Player 1 is buying Baltic Avenue
+Player 2 is buying Electric Company
+Player 2 is buying Tennessee Avenue
+Player 2 is buying Illinois Avenue
+Property Tennessee Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 14 to Player 2
+Player 2 is buying Marvin Gardens
+Player 1 is buying B&O Railroad
 Property Pennsylvania Avenue not owned by bank
 Owned by Player 1
 Player 2 paying rent of 28 to Player 1
-Player 2 attempting to upgrade St Charles Place
-Player 2 successfully built house on St Charles Place
-3 houses on St Charles Place
+Property North Carolina Avenue not owned by bank
+Property Baltic Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 4 to Player 1
+Property Park Place not owned by bank
+Player 2 is buying Oriental Avenue
+Property Reading Railroad not owned by bank
+Owned by Player 2
+Player 1 paying rent of 25 to Player 2
+Player 1  rolled triple doubles, going to jail
+Player 2 is buying Water Works
+Player 1 is buying Short Line
+Property Short Line not owned by bank
+Owned by Player 1
+Player 2 paying rent of 50 to Player 1
+Player 2 does not have enough money to pay rent
+Rent due 50
+Funds available 49
+Property Park Place not owned by bank
+Property Oriental Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 6 to Player 2
 Property States Avenue not owned by bank
 Owned by Player 2
-Player 1 paying rent of 150 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 150
-Funds available 8
-Player 2 is buying Oriental Avenue
-Player 2 attempting to upgrade St Charles Place
-Player 2 successfully built house on St Charles Place
-4 houses on St Charles Place
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-12
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-12
-Property Atlantic Avenue not owned by bank
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-12
+Player 1 paying rent of 10 to Player 2
+Player 2 is buying Pennsylvania Railroad
+Property B&O Railroad not owned by bank
+Owned by Player 1
+Player 2 paying rent of 50 to Player 1
+Player 1 is buying North Carolina Avenue
+Player 1 is buying Connecticut Avenue
+Property Park Place not owned by bank
 Property Pennsylvania Railroad not owned by bank
 Owned by Player 2
 Player 1 paying rent of 50 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 50
-Funds available -42
-Property Water Works not owned by bank
+Property Indiana Avenue not owned by bank
+Property Kentucky Avenue not owned by bank
 Owned by Player 1
-Player 2 paying rent of 20 to Player 1
-Player 2 does not have enough money to pay rent
-Rent due 20
-Funds available 12
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-12
-Player 2 attempting to upgrade St Charles Place
-Upgrade too expensive
-12
-Player 2 attempting to upgrade St Charles Place
-Player 2 successfully built hotel on St Charles Place
-Player 2 attempting to upgrade States Avenue
-Player 2 successfully built house on States Avenue
-3 houses on States Avenue
+Player 2 paying rent of 18 to Player 1
+Property Water Works not owned by bank
+Owned by Player 2
+Player 1 paying rent of 50 to Player 2
+Player 2 is buying Indiana Avenue
+Property Boardwalk not owned by bank
+Property St Charles Place not owned by bank
+Owned by Player 1
+Player 2 paying rent of 10 to Player 1
+Player 1 is buying Virginia Avenue
 Property Atlantic Avenue not owned by bank
-Player 2 attempting to upgrade States Avenue
+Property Park Place not owned by bank
+Player 2 is buying St James Place
+Property Pennsylvania Railroad not owned by bank
+Owned by Player 2
+Player 1 paying rent of 50 to Player 2
+Property Boardwalk not owned by bank
+Property St Charles Place not owned by bank
+Owned by Player 1
+Player 2 paying rent of 10 to Player 1
+Property Kentucky Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 18 to Player 1
+Property Ventnor Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 22 to Player 1
+Property Pacific Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 26 to Player 2
+Property Short Line not owned by bank
+Owned by Player 1
+Player 2 paying rent of 50 to Player 1
+Player 1 is buying Mediterranean Avenue
+Player 1 attempting to upgrade Mediterranean Avenue
+Player 1 successfully built house on Mediterranean Avenue
+1 houses on Mediterranean Avenue
+Player 1 attempting to upgrade Baltic Avenue
+Player 1 successfully built house on Baltic Avenue
+1 houses on Baltic Avenue
+Property Vermont Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 6 to Player 2
+Player 1 attempting to upgrade Mediterranean Avenue
+Player 1 successfully built house on Mediterranean Avenue
+2 houses on Mediterranean Avenue
+Player 1 attempting to upgrade Baltic Avenue
+Player 1 successfully built house on Baltic Avenue
+2 houses on Baltic Avenue
+Player 1 attempting to upgrade Mediterranean Avenue
+Player 1 successfully built house on Mediterranean Avenue
+3 houses on Mediterranean Avenue
+Player 1 attempting to upgrade Mediterranean Avenue
+Player 1 successfully built house on Mediterranean Avenue
+4 houses on Mediterranean Avenue
+Property Tennessee Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 14 to Player 2
+Player 1 attempting to upgrade Mediterranean Avenue
+Player 1 successfully built hotel on Mediterranean Avenue
+Property Water Works not owned by bank
+Owned by Player 2
+Player 1 paying rent of 100 to Player 2
+Player 1 attempting to upgrade Baltic Avenue
 Upgrade too expensive
-12
+37
+Player 1 attempting to upgrade Baltic Avenue
+Upgrade too expensive
+37
+Player 2 is buying Boardwalk
+Player 1 attempting to upgrade Baltic Avenue
+Player 1 successfully built house on Baltic Avenue
+3 houses on Baltic Avenue
+Property States Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 10 to Player 2
+Player 1 attempting to upgrade Baltic Avenue
+Player 1 successfully built house on Baltic Avenue
+4 houses on Baltic Avenue
+Property Tennessee Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 14 to Player 2
+Player 1 attempting to upgrade Baltic Avenue
+Player 1 successfully built hotel on Baltic Avenue
+Property Marvin Gardens not owned by bank
+Owned by Player 2
+Player 1 paying rent of 24 to Player 2
+Property North Carolina Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 26 to Player 1
+Property St Charles Place not owned by bank
+Owned by Player 1
+Player 2 paying rent of 10 to Player 1
+Property Tennessee Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 14 to Player 2
+Property Marvin Gardens not owned by bank
+Owned by Player 2
+Player 1 paying rent of 24 to Player 2
+Property B&O Railroad not owned by bank
+Owned by Player 1
+Player 2 paying rent of 50 to Player 1
+Player 2 is buying Park Place
+Property Oriental Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 6 to Player 2
+Property Connecticut Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 8 to Player 1
+Property Water Works not owned by bank
+Owned by Player 2
+Player 1 paying rent of 80 to Player 2
+Property Park Place not owned by bank
+Owned by Player 2
+Player 1 paying rent of 350 to Player 2
+Property Tennessee Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 14 to Player 2
+Property Atlantic Avenue not owned by bank
+Property Virginia Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 12 to Player 1
+Property B&O Railroad not owned by bank
+Owned by Player 1
+Player 2 paying rent of 50 to Player 1
+Property Water Works not owned by bank
+Owned by Player 2
+Player 1 paying rent of 90 to Player 2
+Property Baltic Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 450 to Player 1
+Property Connecticut Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 8 to Player 1
 Property Pennsylvania Avenue not owned by bank
 Owned by Player 1
 Player 2 paying rent of 28 to Player 1
-Player 2 does not have enough money to pay rent
-Rent due 28
-Funds available 12
-Player 2 attempting to upgrade States Avenue
-Upgrade too expensive
-12
-Player 2 attempting to upgrade States Avenue
-Player 2 successfully built house on States Avenue
-4 houses on States Avenue
-Property States Avenue not owned by bank
+Property Pacific Avenue not owned by bank
 Owned by Player 2
-Player 1 paying rent of 625 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 625
-Funds available 158
-Player 2 attempting to upgrade States Avenue
-Player 2 successfully built hotel on States Avenue
+Player 1 paying rent of 26 to Player 2
+Property Oriental Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 6 to Player 2
+Property B&O Railroad not owned by bank
+Owned by Player 1
+Player 2 paying rent of 50 to Player 1
+Property Mediterranean Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 250 to Player 1
+Player 2  rolled triple doubles, going to jail
+Property Virginia Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 12 to Player 1
+Property Water Works not owned by bank
+Owned by Player 2
+Player 1 paying rent of 70 to Player 2
+Property Pacific Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 26 to Player 2
+Property Park Place not owned by bank
+Owned by Player 2
+Player 1 paying rent of 350 to Player 2
+Property Baltic Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 450 to Player 1
+Property Illinois Avenue not owned by bank
+Owned by Player 2
+Player 1 paying rent of 20 to Player 2
+Property Kentucky Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 18 to Player 1
+Property Pennsylvania Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 28 to Player 1
+Property Baltic Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 450 to Player 1
 Property Indiana Avenue not owned by bank
 Owned by Player 2
 Player 1 paying rent of 18 to Player 2
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-30
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-30
-Property North Carolina Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 26 to Player 1
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-4
-Property Park Place not owned by bank
-Player 2 attempting to upgrade Virginia Avenue
-Player 2 successfully built house on Virginia Avenue
-3 houses on Virginia Avenue
-Player 2 attempting to upgrade Virginia Avenue
-Player 2 successfully built house on Virginia Avenue
-4 houses on Virginia Avenue
-Property States Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 750 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 750
-Funds available 366
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-4
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-4
-Player 1 is buying Park Place
-Property Ventnor Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 22 to Player 1
-Player 2 does not have enough money to pay rent
-Rent due 22
-Funds available 4
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-4
-Property Pennsylvania Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 28 to Player 1
-Player 2 does not have enough money to pay rent
-Rent due 28
-Funds available 4
-Player 2 attempting to upgrade Virginia Avenue
-Upgrade too expensive
-4
-Property States Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 750 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 750
-Funds available 216
-Property Mediterranean Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 2 to Player 1
-Player 2 attempting to upgrade Virginia Avenue
-Player 2 successfully built hotel on Virginia Avenue
-Property Vermont Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 6 to Player 1
 Property Pacific Avenue not owned by bank
 Owned by Player 2
 Player 1 paying rent of 26 to Player 2
-Property St Charles Place not owned by bank
+Property Park Place not owned by bank
 Owned by Player 2
-Player 1 paying rent of 750 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 750
-Funds available 398
-Property B&O Railroad not owned by bank
-Owned by Player 2
-Player 1 paying rent of 50 to Player 2
-Property Connecticut Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 8 to Player 2
-Property Reading Railroad not owned by bank
-Owned by Player 1
-Player 2 paying rent of 25 to Player 1
-Player 2 is buying Atlantic Avenue
-Property Virginia Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 900 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 900
-Funds available 765
-Property Boardwalk not owned by bank
-Property St Charles Place not owned by bank
-Owned by Player 2
-Player 1 paying rent of 750 to Player 2
-Property Virginia Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 900 to Player 2
-Player 1 does not have enough money to pay rent
-Rent due 900
-Funds available 215
-Property Tennessee Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 14 to Player 1
-Property Atlantic Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 22 to Player 2
-Property Baltic Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 4 to Player 2
-Player 2 is buying Boardwalk
-Property New York Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 16 to Player 2
-Property Electric Company not owned by bank
-Owned by Player 1
-Player 2 paying rent of 60 to Player 1
-Property Tennessee Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 14 to Player 1
-Property Connecticut Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 8 to Player 2
-Property Vermont Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 6 to Player 1
-Property Tennessee Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 14 to Player 1
-Property Illinois Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 20 to Player 1
-Property Kentucky Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 18 to Player 2
-Property North Carolina Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 26 to Player 1
-Property Electric Company not owned by bank
-Owned by Player 1
-Player 2 paying rent of 120 to Player 1
+Player 1 paying rent of 350 to Player 2
 Player 2  rolled triple doubles, going to jail
-Property B&O Railroad not owned by bank
+Property Vermont Avenue not owned by bank
 Owned by Player 2
-Player 1 paying rent of 50 to Player 2
-Property Marvin Gardens not owned by bank
+Player 1 paying rent of 6 to Player 2
+Property Kentucky Avenue not owned by bank
 Owned by Player 1
-Player 2 paying rent of 24 to Player 1
-Property Baltic Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 4 to Player 2
+Player 2 paying rent of 18 to Player 1
 Property Pennsylvania Railroad not owned by bank
 Owned by Player 2
 Player 1 paying rent of 50 to Player 2
-Property Mediterranean Avenue not owned by bank
+Property Short Line not owned by bank
 Owned by Player 1
-Player 2 paying rent of 2 to Player 1
+Player 2 paying rent of 50 to Player 1
 Property Pacific Avenue not owned by bank
 Owned by Player 2
 Player 1 paying rent of 26 to Player 2
-Property Vermont Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 6 to Player 1
 Property Boardwalk not owned by bank
 Owned by Player 2
 Player 1 paying rent of 50 to Player 2
-Property Illinois Avenue not owned by bank
+Property St Charles Place not owned by bank
 Owned by Player 1
-Player 2 paying rent of 20 to Player 1
-Property Baltic Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 4 to Player 2
-Property Oriental Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 6 to Player 2
-Property B&O Railroad not owned by bank
+Player 2 paying rent of 10 to Player 1
+Property Pennsylvania Railroad not owned by bank
 Owned by Player 2
 Player 1 paying rent of 50 to Player 2
-Property Ventnor Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 22 to Player 1
-Property Baltic Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 4 to Player 2
-Property Water Works not owned by bank
-Owned by Player 1
-Player 2 paying rent of 80 to Player 1
-Property Pacific Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 26 to Player 2
-Property Oriental Avenue not owned by bank
-Owned by Player 2
-Player 1 paying rent of 6 to Player 2
 Property Kentucky Avenue not owned by bank
+Owned by Player 1
+Player 2 paying rent of 18 to Player 1
+Property Marvin Gardens not owned by bank
 Owned by Player 2
-Player 1 paying rent of 18 to Player 2
-Property Ventnor Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 22 to Player 1
-Property North Carolina Avenue not owned by bank
-Owned by Player 1
-Player 2 paying rent of 26 to Player 1
+Player 1 paying rent of 24 to Player 2
 Property Boardwalk not owned by bank
 Owned by Player 2
 Player 1 paying rent of 50 to Player 2
-Property St James Place not owned by bank
-Owned by Player 2
-Player 1 paying rent of 14 to Player 2
 Properties owned by each player
 Player 1 owns the following properties
-Reading Railroad
+St Charles Place
+Kentucky Avenue
+New York Avenue
+Ventnor Avenue
+Pennsylvania Avenue
+Baltic Avenue
+B&O Railroad
+Short Line
 North Carolina Avenue
+Connecticut Avenue
+Virginia Avenue
 Mediterranean Avenue
+Player 2 owns the following properties
+Reading Railroad
+Vermont Avenue
+States Avenue
+Pacific Avenue
 Electric Company
 Tennessee Avenue
-Marvin Gardens
-Pennsylvania Avenue
-Vermont Avenue
 Illinois Avenue
-Water Works
-Ventnor Avenue
-Park Place
-Player 2 owns the following properties
-Pennsylvania Railroad
-B&O Railroad
-St James Place
-Kentucky Avenue
-Indiana Avenue
-Pacific Avenue
-Virginia Avenue
-St Charles Place
-New York Avenue
-States Avenue
-Baltic Avenue
-Connecticut Avenue
+Marvin Gardens
 Oriental Avenue
-Atlantic Avenue
+Water Works
+Pennsylvania Railroad
+Indiana Avenue
+St James Place
 Boardwalk
+Park Place
 Double Rolled
-Player 1 23
-Player 2 21
+Player 1 15
+Player 2 23
 Times Jailed
-Player 1 2
-Player 2 3
+Player 1 5
+Player 2 2
 Laps Completed
-Player 1 19
+Player 1 18
 Player 2 20
 Times Landed on Each Space
-Space: 0 Go 11
-Space: 1 Mediterranean Avenue 9
+Space: 0 Go 3
+Space: 1 Mediterranean Avenue 5
 Space: 2 Community Chest 3
-Space: 3 Baltic Avenue 6
-Space: 4 Income Tax 3
+Space: 3 Baltic Avenue 10
+Space: 4 Income Tax 4
 Space: 5 Reading Railroad 5
-Space: 6 Oriental Avenue 6
-Space: 7 Chance 4
-Space: 8 Vermont Avenue 8
-Space: 9 Connecticut Avenue 4
-Space: 10 Jail / Visiting 5
-Space: 11 St Charles Place 6
-Space: 12 Electric Company 7
+Space: 6 Oriental Avenue 9
+Space: 7 Chance 3
+Space: 8 Vermont Avenue 6
+Space: 9 Connecticut Avenue 5
+Space: 10 Jail / Visiting 7
+Space: 11 St Charles Place 7
+Space: 12 Electric Company 4
 Space: 13 States Avenue 6
-Space: 14 Virginia Avenue 6
-Space: 15 Pennsylvania Railroad 6
-Space: 16 St James Place 10
-Space: 17 Community Chest 6
-Space: 18 Tennessee Avenue 7
+Space: 14 Virginia Avenue 7
+Space: 15 Pennsylvania Railroad 8
+Space: 16 St James Place 1
+Space: 17 Community Chest 7
+Space: 18 Tennessee Avenue 10
 Space: 19 New York Avenue 5
-Space: 20 Free Parking 6
-Space: 21 Kentucky Avenue 7
-Space: 22 Chance 6
-Space: 23 Indiana Avenue 4
-Space: 24 Illinois Avenue 8
-Space: 25 B&O Railroad 6
-Space: 26 Atlantic Avenue 7
-Space: 27 Ventnor Avenue 11
-Space: 28 Water Works 6
-Space: 29 Marvin Gardens 3
-Space: 30 Go To Jail 5
-Space: 31 Pacific Avenue 7
-Space: 32 North Carolina Avenue 7
-Space: 33 Community Chest 5
-Space: 34 Pennsylvania Avenue 8
-Space: 35 Short Line 3
-Space: 36 Chance 7
-Space: 37 Park Place 7
+Space: 20 Free Parking 7
+Space: 21 Kentucky Avenue 10
+Space: 22 Chance 7
+Space: 23 Indiana Avenue 10
+Space: 24 Illinois Avenue 2
+Space: 25 B&O Railroad 7
+Space: 26 Atlantic Avenue 2
+Space: 27 Ventnor Avenue 4
+Space: 28 Water Works 11
+Space: 29 Marvin Gardens 9
+Space: 30 Go To Jail 7
+Space: 31 Pacific Avenue 12
+Space: 32 North Carolina Avenue 4
+Space: 33 Community Chest 2
+Space: 34 Pennsylvania Avenue 6
+Space: 35 Short Line 7
+Space: 36 Chance 2
+Space: 37 Park Place 9
 Space: 38 Luxury Tax 1
-Space: 39 Boardwalk 5
+Space: 39 Boardwalk 7
