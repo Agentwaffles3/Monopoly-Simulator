@@ -112,21 +112,21 @@ class Visualizer:
         self.clock.tick(60)
 
 
-def __main__():
-    # TODO Eventually this will be removed and the visualizer
-    # TODO will be able to be called from an external script
-    spots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+# def __main__():
+#     # TODO Eventually this will be removed and the visualizer
+#     # TODO will be able to be called from an external script
+#     spots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+#
+#     vis = Visualizer(spots)
+#
+#     while not vis.done:
+#         for event in pygame.event.get():
+#             if event.type == pygame.QUIT:
+#                 vis.done = True
+#             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+#                 vis.done = True
+#
+#         vis.update()
 
-    vis = Visualizer(spots)
 
-    while not vis.done:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                vis.done = True
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                vis.done = True
-
-        vis.update()
-
-
-__main__()
+# __main__()

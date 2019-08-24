@@ -9,5 +9,7 @@
     "Yellow" : "65",
     "Green" : "75",
     "Blue" : "85"
-  }
+  },
+  "Minimum Wallet Balance" :  "250",
+  "Upgrades Per Turn" : "3"
 }

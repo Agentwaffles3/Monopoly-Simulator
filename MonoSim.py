@@ -1,11 +1,12 @@
 # Module to hold Classes and Methods needed for Monopoly simulations
 import random
 import json
+import csv
 
 
 class Player:
 
-    def __init__(self, name, ai_type="Basic"):  # TODO update camelCase to better_style
+    def __init__(self, name, ai_type="Player AI Models\Basic.json"):  # TODO update camelCase to better_style
         self.board_position = 0
         self.laps_completed = 0
         self.doubles_rolled = 0
@@ -16,6 +17,8 @@ class Player:
         self.wallet = 1500
         self.total_wealth = 0
 
+        self.upgrades_attempted = 0
+
         self.AI_type = ai_type
 
         self.properties = []
@@ -23,23 +26,26 @@ class Player:
         self.monopolies = {}
 
         self.ai_data = json_loader(ai_type)
-
+        self.calc_wealth()
 
     # def __str__(self):
     #     return self.player_name
 
-    def move(self, roll_sum):
+    def move(self, roll_sum, log):
         self.board_position += roll_sum
         if self.board_position >= 40:
             self.laps_completed += 1
             self.board_position -= 40
             self.wallet += 200
+            if log.logging is True:
+                log.logger("\t" + self.player_name + " passed GO")
         self.landed_on.append(self.board_position)
 
-    def check_doubles(self, rolled):
+    def check_doubles(self, rolled, new):
         if rolled[0] == rolled[1]:
-            self.doubles_rolled += 1
-            self.consecutive_doubles += 1
+            if new is True:
+                self.doubles_rolled += 1
+                self.consecutive_doubles += 1
             return True
         else:
             return False
@@ -53,31 +59,32 @@ class Player:
     def calc_wealth(self):  # TODO create a new worth report
         self.total_wealth = self.wallet
         for i in self.properties:
-            self.total_wealth += i.prop_cost
-            self.total_wealth += (i.houses_built * i.house_cost)
-            if i.hotel_built is True:
-                self.total_wealth += i.house_cost
+            self.total_wealth += int(i.prop_cost)
+            if i.type == "basic":
+                self.total_wealth += (int(i.houses_built) * int(i.house_cost))
+                if i.hotel_built is True:
+                    self.total_wealth += int(i.house_cost)
                 
-    def buy_property(self, m_property, bank):  # TODO add in some form of strategy when buying properties
+    def buy_property(self, m_property, bank, log):  # TODO add in some form of strategy when buying properties
         # print(self.player_name + " buying " + m_property.prop_name)
         self.wallet -= int(m_property.prop_cost)
         m_property.owner = self.player_name
         self.properties.append(m_property)
         if m_property.color != "Special":
-            check_monopoly(self, m_property, bank)
+            check_monopoly(self, m_property, bank, log)
 
     def pay_rent(self, owner, rent, log):  # TODO add a way for the players to free up funds to pay rent
         if log.logging is True:
             log_data = self.player_name + " paying rent of " + str(rent) + " to " + owner.player_name
-            log.logger(log_data)
+            log.logger("\t" + log_data)
         if self.wallet >= rent:
             self.wallet -= rent
             owner.wallet += rent
         else:
             if log.logging is True:
-                log.logger(self.player_name + " does not have enough money to pay rent")
-                log.logger("Rent due " + str(rent))
-                log.logger("Funds available " + str(self.wallet))
+                log.logger("\t" + self.player_name + " does not have enough money to pay rent")
+                log.logger("\t" + "Rent due " + str(rent))
+                log.logger("\t" + "Funds available " + str(self.wallet))
 
     def upgrade_property(self, log):  # TODO dd a way to prioritize different upgrade paths
         possible_upgrades = []
@@ -102,11 +109,12 @@ class Player:
             # print(upgrade_target[0])
             for i in self.properties:
                 if i.prop_name == upgrade_target[0]:
-                    self.buy_house(i, log)
+                    if self.evaluate_purchase(log, i.house_cost) is True:
+                        self.buy_house(i, log)
 
     def buy_house(self, m_property, log):
         if log.logging is True:
-            log.logger(self.player_name + " attempting to upgrade " + m_property.prop_name)
+            log.logger("\t" + self.player_name + " attempting to upgrade " + m_property.prop_name)
         if self.wallet > int(m_property.house_cost):
             self.wallet -= int(m_property.house_cost)
             if m_property.houses_built != 4:
@@ -114,17 +122,29 @@ class Player:
                 # print(m_property.prop_name + " " + str(m_property.houses_built))
                 m_property.update_rent()
                 if log.logging is True:
-                    log.logger(self.player_name + " successfully built house on " + m_property.prop_name)
-                    log.logger(str(m_property.houses_built) + " houses on " + m_property.prop_name)
+                    log.logger("\t" + self.player_name + " successfully built house on " + m_property.prop_name)
+                    log.logger("\t" + str(m_property.houses_built) + " houses on " + m_property.prop_name)
             elif m_property.houses_built == 4:
                 m_property.hotel_built = True
                 m_property.update_rent()
                 if log.logging is True:
-                    log.logger(self.player_name + " successfully built hotel on " + m_property.prop_name)
+                    log.logger("\t" + self.player_name + " successfully built hotel on " + m_property.prop_name)
         else:
             if log.logging is True:
-                log.logger("Upgrade too expensive")
-                log.logger(str(self.wallet))
+                log.logger("\t" + "Upgrade too expensive")
+                log.logger("\t" + str(self.wallet))
+                self.upgrades_attempted = 5
+
+    def evaluate_purchase(self, log, cost, type="upgrade"):
+        confirm = False
+        if type == "purchase":
+            if self.wallet - int(cost) > int(self.ai_data["Minimum Wallet Balance"]):
+                confirm = True
+        if type == "upgrade":
+            if self.wallet - int(cost) > int(self.ai_data["Minimum Wallet Balance"]):
+                confirm = True
+        return confirm
+
 
 
 class Reporter:
@@ -286,6 +306,8 @@ class Bank:
 class Logger:
     def __init__(self, logging):
         self.log = open("log.txt", "w")
+        self.tracker = open("tracker.csv", mode="w")
+        self.tracker_worker = csv.writer(self.tracker)
         if logging is True:
             self.logging = True
         if logging is False:
@@ -294,11 +316,15 @@ class Logger:
     def logger(self, report):
         self.log.write(str(report) + "\n")
 
+    def tracker(self, data):
+        self.tracker_worker.writerow(data)
+
 
 class Simulation:
     def __init__(self, num_players=random.randint(2, 8), logging=False):
         self.game_over = False
         self.log = Logger(logging)
+        self.turn_counter = 0
 
         self.player1 = Player("Player 1")
         self.player2 = Player("Player 2")
@@ -335,41 +361,64 @@ class Simulation:
         random.shuffle(self.players)
         
     def turn(self, player):
+        self.turn_counter += 1
+        if self.log.logging is True:
+            self.log.logger("Turn " + str(self.turn_counter))
+            self.log.logger(player.player_name + 's turn')
         your_turn = True
         player.consecutive_doubles = 0
+        player.upgrades_attempted = 0
         while your_turn is True:
-            if player.in_jail is True:
+            if player.in_jail is True:  # if in jail try to get out
                 escape_jail(player)
             rolled = roll()  # roll the dice
-            player.move(rolled[0] + rolled[1])  # move player through total rolled
-            player.check_jail()
+            player.check_doubles(rolled, True)
+            player.move(rolled[0] + rolled[1], self.log)  # move player through total rolled
+            if self.log.logging is True:
+                self.log.logger("\tRolled " + str(rolled[0] + rolled[1]))
+                self.log.logger("\tLanded on " + self.look_up[str(player.board_position)])
+            player.check_jail()     # check to see if landed on go to jail tile
+            if player.consecutive_doubles == 3:
+                if self.log.logging is True:
+                    self.log.logger("\t" + player.player_name + "  rolled triple doubles, going to jail")
+                player.board_position = 10
+                player.in_jail = True
+                your_turn = False
             for n in self.Bank.properties:
+                # Check to see who owns the property the player is currently on
                 if n.prop_name == self.look_up[str(player.board_position)]:
-                    if n.owner == "Bank" and player.wallet > int(n.prop_cost):
+                    if n.owner == "Bank":   # bank owned property
+                        if player.evaluate_purchase(self.log, n.prop_cost, type="purchase"):    #think about buying
+                            if self.log.logging is True:
+                                log_data = player.player_name + " is buying " + n.prop_name
+                                self.log.logger("\t" + log_data)
+                            player.buy_property(n, self.Bank, self.log)     # buy property
+                    elif n.owner != player.player_name:     # owned by another player
                         if self.log.logging is True:
-                            log_data = player.player_name + " is buying " + n.prop_name
-                            self.log.logger(log_data)
-                        player.buy_property(n, self.Bank)
-                    elif n.owner != player.player_name:
-                        if self.log.logging is True:
-                            self.log.logger("Property " + n.prop_name + " not owned by bank")
+                            self.log.logger("\t" + "Property " + n.prop_name + " not owned by bank")
                         for i in self.players:
-                            if n.owner == i.player_name:
+                            if n.owner == i.player_name:    # find owner so we can pay them
                                 if self.log.logging is True:
-                                    self.log.logger("Owned by " + i.player_name)
+                                    self.log.logger("\t" + "Owned by " + i.player_name)
                                 if n.type == "Basic":
                                     player.pay_rent(i, int(n.current_rent), self.log)
                                 else:
                                     rent = n.calc_rent(i, rolled[0] + rolled[1])
                                     player.pay_rent(i, rent, self.log)
-            player.upgrade_property(self.log)
-            your_turn = player.check_doubles(rolled)  # check if turn ended
-            if player.consecutive_doubles == 3:
-                if self.log.logging is True:
-                    self.log.logger(player.player_name + "  rolled triple doubles, going to jail")
-                player.board_position = 10
-                player.in_jail = True
-                your_turn = False
+            while player.upgrades_attempted < int(player.ai_data["Upgrades Per Turn"]):
+                player.upgrades_attempted += 1
+                player.upgrade_property(self.log)
+            your_turn = player.check_doubles(rolled, False)  # check if turn ended
+
+        player.calc_wealth()
+        if self.log.logging is True:
+            self.log.logger("\t" + "Player is worth: " + str(player.total_wealth))
+            data = [self.turn_counter]
+            for i in self.players:
+                data.append(i.player_name)
+                data.append(i.wallet)
+                data.append(i.total_wealth)
+            self.log.tracker_worker.writerow(data)
             
     # def board_reference_setup(self):
     #     file = "boardReference.json"
@@ -380,8 +429,15 @@ class Simulation:
     # It seems to work, leaving here anyway
 
     def check_game_over(self):
-        if self.players[0].laps_completed == 20:
+        if self.players[0].laps_completed == 40:
             self.game_over = True
+            if self.log.logging is True:
+                self.log.logger("Lap count reached")
+        for i in self.players:
+            if i.total_wealth <= 0:
+                self.game_over = True
+                if self.log.logging is True:
+                    self.log.logger(i.player_name + " has a net worth of " + i.total_wealth)
 
     def run_sim(self):
         while self.game_over is False:
@@ -452,14 +508,15 @@ def property_setup(log, bank, logging):
             log.logger("Created " + bank.properties[len(bank.properties) - 1].prop_name)
         
 
-def check_monopoly(player, m_property, bank):
+def check_monopoly(player, m_property, bank, log):
     monopoly_parts_owned = 0
     if m_property.color in list(bank.monopolies.keys()):
         for i in player.properties:
             if i.color == m_property.color:
                 monopoly_parts_owned += 1
     if monopoly_parts_owned == int(m_property.monopoly_parts_needed):
-        # print(player.player_name + " owns the monopoly of color " + m_property.color)
+        if log.logging is True:
+            log.logger(player.player_name + " owns the monopoly of color " + m_property.color)
         player.monopolies[m_property.color] = bank.monopolies[m_property.color]
         del bank.monopolies[m_property.color]
         return True
