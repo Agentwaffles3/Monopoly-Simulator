@@ -6,7 +6,7 @@ import csv
 
 class Player:
 
-    def __init__(self, name, ai_type="Player AI Models\Basic.json"):  # TODO update camelCase to better_style
+    def __init__(self, name, ai_type="Player AI Models\Basic.json"):
         self.board_position = 0
         self.laps_completed = 0
         self.doubles_rolled = 0
@@ -86,13 +86,13 @@ class Player:
                 log.logger("\t" + "Rent due " + str(rent))
                 log.logger("\t" + "Funds available " + str(self.wallet))
 
-    def upgrade_property(self, log):  # TODO dd a way to prioritize different upgrade paths
+    def upgrade_property(self, log):  # TODO add a way to prioritize different upgrade paths
         possible_upgrades = []
         for i in self.monopolies:
             # upgrade data = ['prop_name', 'upgrade_cost', 'houses_built', 'nextRent', 'upgrade_difference']
             for j in self.properties:
                 if j.color == i and j.hotel_built is False:
-                    upgrade_data = []
+                    upgrade_data = list([])
                     upgrade_data.append(j.prop_name)
                     upgrade_data.append(j.house_cost)
                     upgrade_data.append(j.houses_built)
@@ -144,7 +144,6 @@ class Player:
             if self.wallet - int(cost) > int(self.ai_data["Minimum Wallet Balance"]):
                 confirm = True
         return confirm
-
 
 
 class Reporter:
@@ -271,12 +270,12 @@ class SpecialProperty:
 
 class Card:  # TODO use these, maybe finish at some point
 
-    def __init__(self, card_data, deck):
+    def __init__(self, card_data):
         self.text = card_data["Text"]
         self.type = card_data["Type"]
-        self.deck = deck
         if self.type == "getOutFree":
             self.inDeck = True
+            self.owner = "none"
         if self.type == "Move":
             self.target = card_data["moveTarget"]
         if self.type == "Income":
@@ -325,12 +324,11 @@ class Simulation:
         self.game_over = False
         self.log = Logger(logging)
         self.turn_counter = 0
-
+        self.chance_index = 0
+        self.comm_chest_index = 0
         self.player1 = Player("Player 1")
         self.player2 = Player("Player 2")
-            
         self.Reporter = Reporter()
-
         if num_players >= 2:
             self.players = [self.player1, self.player2]
         if num_players >= 3:
@@ -354,7 +352,10 @@ class Simulation:
                 
         self.Bank = Bank()
         # print(list(self.Bank.monopolies.keys()))
-        property_setup(self.log, self.Bank, self.log.logging)
+        property_setup(self.log, self.Bank)
+        self.chance_deck = []
+        self.comm_chest_deck = []
+        deck_setup(self.chance_deck, self.comm_chest_deck, self.log)
             
         self.look_up = json_loader("Program Resources\Board Reference.json")
             
@@ -383,12 +384,13 @@ class Simulation:
                     self.log.logger("\t" + player.player_name + "  rolled triple doubles, going to jail")
                 player.board_position = 10
                 player.in_jail = True
-                your_turn = False
+                # your_turn = False
+                break
             for n in self.Bank.properties:
                 # Check to see who owns the property the player is currently on
                 if n.prop_name == self.look_up[str(player.board_position)]:
                     if n.owner == "Bank":   # bank owned property
-                        if player.evaluate_purchase(self.log, n.prop_cost, type="purchase"):    #think about buying
+                        if player.evaluate_purchase(self.log, n.prop_cost, type="purchase"):    # think about buying
                             if self.log.logging is True:
                                 log_data = player.player_name + " is buying " + n.prop_name
                                 self.log.logger("\t" + log_data)
@@ -486,13 +488,13 @@ class Simulation:
 # Beginning of Function definitions
 
 
-def property_setup(log, bank, logging):
+def property_setup(log, bank):
     data = json_loader("Program Resources\properties.json")
     for n in range(1, 23):
-        if logging is True:
+        if log.logging is True:
             log.logger("Creating property " + str(n))
         bank.properties.append(BasicProperty(data.get(str(n))))
-        if logging is True:
+        if log.logging is True:
             log.logger("Created " + bank.properties[n-1].prop_name)
         
     file = "Program Resources\specialProperties.json"
@@ -501,11 +503,25 @@ def property_setup(log, bank, logging):
     raw.close()
     for n in range(1, 7):
         # print (read.get(str(n)))
-        if logging is True:
+        if log.logging is True:
             log.logger("Creating special property " + str(n))
         bank.properties.append(SpecialProperty(read.get(str(n))))
-        if logging is True:
+        if log.logging is True:
             log.logger("Created " + bank.properties[len(bank.properties) - 1].prop_name)
+
+
+def  deck_setup(chance, comm_chest, log):
+    data = json_loader("Program Resources\chance.json")
+    for i in range(1, 17):
+        if log.logging is True:
+            log.logger("Creating chance card " + str(i))
+        chance.append(Card(data[str(i)]))
+
+    data = json_loader("Program Resources\commchest.json")
+    for i in range(1, 17):
+        if log.logging is True:
+            log.logger("Creating community chest card " + str(i))
+        comm_chest.append(Card(data[str(i)]))
         
 
 def check_monopoly(player, m_property, bank, log):
@@ -516,7 +532,7 @@ def check_monopoly(player, m_property, bank, log):
                 monopoly_parts_owned += 1
     if monopoly_parts_owned == int(m_property.monopoly_parts_needed):
         if log.logging is True:
-            log.logger(player.player_name + " owns the monopoly of color " + m_property.color)
+            log.logger("\t" + player.player_name + " owns the monopoly of color " + m_property.color)
         player.monopolies[m_property.color] = bank.monopolies[m_property.color]
         del bank.monopolies[m_property.color]
         return True
@@ -559,5 +575,15 @@ def json_loader(file):
     raw.close()
     return read
 
+
+def read_card(player, card, sim):
+    if card.type == "Income":
+        player.wallet += int(card.amount)
+        if sim.log.logging is True:
+            sim.log.logger("\t" + card.text + " receive " + card.amount)
+    if card.type == "Tax":
+        player.wallet -= int(card.amount)
+        if sim.log.logging is True:
+            sim.log.logger("\t" + card.text + " pay " + card.amount)
 
 """end"""

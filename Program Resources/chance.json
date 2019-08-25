@@ -29,68 +29,63 @@
 	},
 	"6":
 	{
-		"Text" : "Advance to nearest Utility",
-		"Type" : "moveUtil"
-	,
-	"7":
-	{
 		"Text" : "Bank pays you dividend",
 		"Type" : "Income",
 		"Amount" : "50"
 	},
-	"8":
+	"7":
 	{
 		"Text" : "Get out of Jail Free",
 		"Type" : "getOutFree"
 	},
-	"9":
+	"8":
 	{
 		"Text" : "Go Back Three Spaces",
 		"Type" : "moveBack"
 	},
-	"10":
+	"9":
 	{
 		"Text" : "Go to Jail",
 		"Type" : "moveJail"
 	},
-	"11":
+	"10":
 	{
 		"Text" : "Make general repairs on all your property",
 		"Type" : "buildingUpkeep",
 		"houseCost" : "25",
 		"hotelCost" : "100"
 	},
-	"12":
+	"11":
 	{
 		"Text" : "Pay poor tax",
 		"Type" : "Tax",
 		"Amount" : "15"
 	},
-	"13":
+	"12":
 	{
 		"Text" : "Take a trip to Reading Railroad",
 		"Type" : "Move",
 		"moveTarget" : "5"
 	},
-	"14":
+	"13":
 	{
 		"Text" : "Take a walk on the Boardwalk",
 		"Type" : "Move",
 		"moveTarget" : "39"
 	},
-	"15":
+	"14":
 	{
 		"Text" : "You have been elected Chairman of the Board",
 		"Type" : "payAll",
 		"Amount" : "50"
 	},
-	"16":
+	"15":
 	{
 		"Text" : "Your building loan matures",
 		"Type" : "Income",
 		"Amount" : "150"
 	},
-	"17":
+	"16":
 	{
 		"Text" : "You have won a crossword competition",
 		"Type" : "Income",
