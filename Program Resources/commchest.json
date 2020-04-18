@@ -1,0 +1,82 @@
+{
+	"1":{
+		"Text" : "Advance to Go",
+		"Type" : "Move",
+		"moveTarget" : "40"
+	},
+	"2":{
+		"Text" : "Bank error in your favor",
+		"Type" : "Income",
+		"Amount" : "200"
+	},
+	"3":{
+		"Text" : "Doctor's fees",
+		"Type" : "Tax",
+		"Amount" : "50"
+	},
+	"4":{
+		"Text" : "From sale of stock you get $50",
+		"Type" : "Income",
+		"Amount" : "50"
+	},
+	"5":{
+		"Text" : "Get out of Jail Free",
+		"Type" : "getOutFree"
+	},
+	"6":{
+		"Text" : "Grand Opera Night",
+		"Type" : "collectAll",
+		"Amount" : "50"
+	},
+	"7":{
+		"Text" : "Holiday Fund matures",
+		"Type" : "Income",
+		"Amount" : "100"
+	},
+	"8":{
+		"Text" : "Income tax refund",
+		"Type" : "Income",
+		"Amount" : "20"
+	},
+	"9":{
+		"Text" : "Life insurance matures",
+		"Type" : "Income",
+		"Amount" : "100"
+	},
+	"10":{
+		"Text" : "Pay hospital fees",
+		"Type" : "Tax",
+		"Amount" : "100"
+	},
+	"11":{
+		"Text" : "Pay school fees",
+		"Type" : "Tax",
+		"Amount" : "150"
+	},
+	"12":{
+		"Text" : "Receive $25 consultancy fee",
+		"Type" : "Income",
+		"Amount" : "25"
+	},
+	"13":{
+		"Text" : "You are assessed for street repairs",
+		"Type" : "buildingUpkeep",
+		"houseCost" : "40",
+		"hotelCost" : "115"
+	},
+	"14":{
+		"Text" : "You have won second prize in a beauty contest",
+		"Type" : "Income",
+		"Amount" : "10"
+	},
+	"15":{
+		"Text" : "You inherit $100",
+		"Type" : "Income",
+		"Amount" : "100"
+	},
+	"16":{
+		"Text" : "Go to Jail",
+		"Type" : "moveJail"
+	}
+	
+}

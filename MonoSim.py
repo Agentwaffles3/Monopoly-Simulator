@@ -139,10 +139,20 @@ class Player:
         confirm = False
         if type == "purchase":
             if self.wallet - int(cost) > int(self.ai_data["Minimum Wallet Balance"]):
+                if log.logging is True:
+                    log.logger("\t" + self.player_name + " can purchase")
                 confirm = True
+            else:
+                if log.logging is True:
+                    log.logger("\t" + self.player_name + " cannot purchase")
         if type == "upgrade":
             if self.wallet - int(cost) > int(self.ai_data["Minimum Wallet Balance"]):
+                if log.logging is True:
+                    log.logger("\t" + self.player_name + " can upgrade")
                 confirm = True
+            else:
+                if log.logging is True:
+                    log.logger("\t" + self.player_name + " cannot upgrade")
         return confirm
 
 
@@ -356,8 +366,11 @@ class Simulation:
         self.chance_deck = []
         self.comm_chest_deck = []
         deck_setup(self.chance_deck, self.comm_chest_deck, self.log)
+        random.shuffle(self.chance_deck)
+        random.shuffle(self.comm_chest_deck)
             
         self.look_up = json_loader("Program Resources\Board Reference.json")
+        self.special_tiles = ("0", "2", "4", "7", "10", "17", "20", "22", "30", "32", "36", "38")
             
         random.shuffle(self.players)
         
@@ -386,27 +399,9 @@ class Simulation:
                 player.in_jail = True
                 # your_turn = False
                 break
-            for n in self.Bank.properties:
-                # Check to see who owns the property the player is currently on
-                if n.prop_name == self.look_up[str(player.board_position)]:
-                    if n.owner == "Bank":   # bank owned property
-                        if player.evaluate_purchase(self.log, n.prop_cost, type="purchase"):    # think about buying
-                            if self.log.logging is True:
-                                log_data = player.player_name + " is buying " + n.prop_name
-                                self.log.logger("\t" + log_data)
-                            player.buy_property(n, self.Bank, self.log)     # buy property
-                    elif n.owner != player.player_name:     # owned by another player
-                        if self.log.logging is True:
-                            self.log.logger("\t" + "Property " + n.prop_name + " not owned by bank")
-                        for i in self.players:
-                            if n.owner == i.player_name:    # find owner so we can pay them
-                                if self.log.logging is True:
-                                    self.log.logger("\t" + "Owned by " + i.player_name)
-                                if n.type == "Basic":
-                                    player.pay_rent(i, int(n.current_rent), self.log)
-                                else:
-                                    rent = n.calc_rent(i, rolled[0] + rolled[1])
-                                    player.pay_rent(i, rent, self.log)
+            if str(player.board_position) not in self.special_tiles:
+                self.landed_on_property(player, rolled)
+
             while player.upgrades_attempted < int(player.ai_data["Upgrades Per Turn"]):
                 player.upgrades_attempted += 1
                 player.upgrade_property(self.log)
@@ -421,14 +416,29 @@ class Simulation:
                 data.append(i.wallet)
                 data.append(i.total_wealth)
             self.log.tracker_worker.writerow(data)
-            
-    # def board_reference_setup(self):
-    #     file = "boardReference.json"
-    #     raw = open(file)
-    #     self.look_up = json.load(raw)
-    #     raw.close()
-    # Legacy code
-    # It seems to work, leaving here anyway
+
+    def landed_on_property(self, player, rolled):
+        for n in self.Bank.properties:
+            # Check to see who owns the property the player is currently on
+            if n.prop_name == self.look_up[str(player.board_position)]:
+                if n.owner == "Bank":  # bank owned property
+                    if player.evaluate_purchase(self.log, n.prop_cost, type="purchase"):  # think about buying
+                        if self.log.logging is True:
+                            log_data = player.player_name + " is buying " + n.prop_name
+                            self.log.logger("\t" + log_data)
+                        player.buy_property(n, self.Bank, self.log)  # buy property
+                elif n.owner != player.player_name:  # owned by another player
+                    if self.log.logging is True:
+                        self.log.logger("\t" + "Property " + n.prop_name + " not owned by bank")
+                    for i in self.players:
+                        if n.owner == i.player_name:  # find owner so we can pay them
+                            if self.log.logging is True:
+                                self.log.logger("\t" + "Owned by " + i.player_name)
+                            if n.type == "Basic":
+                                player.pay_rent(i, int(n.current_rent), self.log)
+                            else:
+                                rent = n.calc_rent(i, rolled[0] + rolled[1])
+                                player.pay_rent(i, rent, self.log)
 
     def check_game_over(self):
         if self.players[0].laps_completed == 40:
@@ -510,7 +520,7 @@ def property_setup(log, bank):
             log.logger("Created " + bank.properties[len(bank.properties) - 1].prop_name)
 
 
-def  deck_setup(chance, comm_chest, log):
+def deck_setup(chance, comm_chest, log):
     data = json_loader("Program Resources\chance.json")
     for i in range(1, 17):
         if log.logging is True:
@@ -585,5 +595,10 @@ def read_card(player, card, sim):
         player.wallet -= int(card.amount)
         if sim.log.logging is True:
             sim.log.logger("\t" + card.text + " pay " + card.amount)
+    if card.type == "Move":
+        player.board_position = int(card.target)
+        if sim.log.logging is True:
+            sim.log.logger("\t" + card.text)
+
 
 """end"""

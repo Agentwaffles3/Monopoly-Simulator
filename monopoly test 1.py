@@ -19,6 +19,9 @@ if __name__ == "__main__":
     sim.players.sort(key=str)
     print("Simulation complete\n")
 
+print(sim.look_up)
+# for i in sim.Bank.properties:
+#     print(i.prop_name)
     # for i in sim.players:
     #     sim.Reporter.laps_report(sim, i)
     # sim.Reporter.landing_report(sim, sim.players)
